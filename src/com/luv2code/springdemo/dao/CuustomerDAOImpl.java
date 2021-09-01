@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.luv2code.springdemo.entity.Customer;
 
+@SuppressWarnings("deprecation")
 @Repository
 public class CuustomerDAOImpl implements CustomerDAO {
 
