@@ -12,6 +12,7 @@ import com.luv2code.springdemo.entity.Customer;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
+	// need to inject customer dao
 	@Autowired
 	private CustomerDAO customerDAO;
 	
@@ -21,4 +22,15 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDAO.getCustomers();
 	}
 
+	@Override
+	@Transactional
+	public void saveCustomer(Customer theCustomer) {
+
+		customerDAO.saveCustomer(theCustomer);
+	}
 }
+
+
+
+
+
